@@ -132,6 +132,147 @@ function sendWhatsApp() {
     const message = `Hola Punto Chino, soy *${name}*.%0A%0AQuisiera cotizar un repuesto para mi vehículo:%0A*Vehículo:* ${vehicle}%0A*Teléfono:* ${phone}%0A*Detalles:* ${details}`;
 
     // Replace with actual business WhatsApp number
-    const whatsappUrl = `https://wa.me/593999999999?text=${message}`;
+    const whatsappUrl = `https://wa.me/593984911400?text=${message}`;
     window.open(whatsappUrl, '_blank');
 }
+
+// =========================================================================
+// LOCATIONS MAP — Leaflet + OpenStreetMap (CARTO dark tiles), free / no API key
+// =========================================================================
+const mapEl = document.getElementById('map');
+if (mapEl && typeof L !== 'undefined') {
+    const branches = [
+        {
+            name: 'Punto Chino — Manta (Matriz)',
+            addr: 'Av. 4 de Noviembre y calle 299, diagonal a hielo “Polar”',
+            tel: '0984911400',
+            lat: -0.9624580525911236,
+            lng: -80.70980779118017
+        },
+        {
+            name: 'Punto Chino — Portoviejo',
+            addr: 'Frente al cuerpo de bomberos, Av. 15 de Abril',
+            tel: '0963862306',
+            lat: -1.0635925940835218,
+            lng: -80.45699369349812
+        }
+    ];
+
+    const map = L.map('map', { scrollWheelZoom: false });
+    map.attributionControl.setPrefix(false); // quita el texto "Leaflet"
+
+    // Base oscura de Esri — libre, sin API key ni marca de agua
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri',
+        maxZoom: 16
+    }).addTo(map);
+    // Capa de etiquetas (nombres de ciudades y calles)
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 16
+    }).addTo(map);
+
+    const markers = {};
+    const bounds = [];
+
+    branches.forEach(b => {
+        const key = `${b.lat},${b.lng}`;
+        if (markers[key]) return; // evita apilar pines en la misma dirección (Manta)
+        const gmaps = `https://www.google.com/maps/search/?api=1&query=${b.lat},${b.lng}`;
+        const marker = L.marker([b.lat, b.lng]).addTo(map);
+        marker.bindPopup(
+            `<strong>${b.name}</strong><br>${b.addr}<br>` +
+            `<a href="tel:${b.tel}">${b.tel}</a><br>` +
+            `<a href="${gmaps}" target="_blank" rel="noopener">Ver en Google Maps &rsaquo;</a>`
+        );
+        markers[key] = marker;
+        bounds.push([b.lat, b.lng]);
+    });
+
+    map.fitBounds(bounds, { padding: [60, 60] });
+    if (map.getZoom() > 12) map.setZoom(12);
+
+    // Fix tile sizing once the container has its final dimensions
+    setTimeout(() => map.invalidateSize(), 300);
+}
+
+// =========================================================================
+// THEME TOGGLE (claro / oscuro) con persistencia en localStorage
+// =========================================================================
+const themeToggle = document.getElementById('themeToggle');
+
+function updateThemeIcon(theme) {
+    if (!themeToggle) return;
+    const icon = themeToggle.querySelector('i');
+    if (!icon) return;
+    // Oscuro -> muestra sol (para pasar a claro); Claro -> muestra luna
+    icon.className = theme === 'light' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+}
+
+updateThemeIcon(document.documentElement.getAttribute('data-theme') || 'dark');
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        const next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('pc-theme', next); } catch (e) { }
+        updateThemeIcon(next);
+    });
+}
+
+// =========================================================================
+// LIGHTBOX — visor de fotos de locales con slider
+// =========================================================================
+(function () {
+    const lb = document.getElementById('lightbox');
+    if (!lb) return;
+    const lbImg = document.getElementById('lbImg');
+    const lbCount = document.getElementById('lbCount');
+    const btnPrev = document.getElementById('lbPrev');
+    const btnNext = document.getElementById('lbNext');
+    const btnClose = document.getElementById('lbClose');
+    let imgs = [];
+    let idx = 0;
+
+    function render() {
+        lbImg.src = imgs[idx];
+        const multi = imgs.length > 1;
+        lbCount.textContent = multi ? (idx + 1) + ' / ' + imgs.length : '';
+        btnPrev.style.display = multi ? 'flex' : 'none';
+        btnNext.style.display = multi ? 'flex' : 'none';
+    }
+    function open(list, start) {
+        imgs = list;
+        idx = start || 0;
+        render();
+        lb.classList.add('open');
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+    function close() {
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+    function next() { idx = (idx + 1) % imgs.length; render(); }
+    function prev() { idx = (idx - 1 + imgs.length) % imgs.length; render(); }
+
+    document.querySelectorAll('.loc-photo').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const data = btn.getAttribute('data-images');
+            if (!data) return;
+            open(data.split('|'), 0);
+        });
+    });
+
+    btnNext.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+    btnPrev.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+    btnClose.addEventListener('click', close);
+    lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+    document.addEventListener('keydown', (e) => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowRight') next();
+        else if (e.key === 'ArrowLeft') prev();
+    });
+})();

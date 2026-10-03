@@ -4,21 +4,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punto Chino - Repuestos Autos Chinos</title>
+
+    <!-- ===================== SEO ===================== -->
+    <title>Repuestos de Autos Chinos en Ecuador | Punto Chino Manta y Portoviejo</title>
     <meta name="description"
-        content="Los mejores repuestos para tu auto chino. Líderes en repuestos automotrices chinos.">
+        content="Repuestos originales y alternativos para autos chinos: Chery, Great Wall, JAC, Changan, Dongfeng, Jetour y más. Sucursales en Manta y Portoviejo, con envíos a todo Ecuador. Cotiza por WhatsApp.">
+    <meta name="keywords"
+        content="repuestos autos chinos, autorepuestos chinos Ecuador, repuestos automotrices chinos, repuestos Chery, repuestos Great Wall, repuestos JAC, repuestos Changan, repuestos Dongfeng, repuestos Jetour, autorepuestos Manta, autorepuestos Portoviejo, repuestos Manabí, Punto Chino">
+    <meta name="author" content="Punto Chino">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="theme-color" content="#ff3546">
+    <link rel="canonical" href="https://puntochino.com/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="https://puntochino.com/assets/images/logo.png">
+    <link rel="apple-touch-icon" href="https://puntochino.com/assets/images/logo.png">
+
+    <!-- Geo (SEO local) -->
+    <meta name="geo.region" content="EC-M">
+    <meta name="geo.placename" content="Manta, Portoviejo">
+    <meta name="geo.position" content="-0.962458;-80.709808">
+    <meta name="ICBM" content="-0.962458, -80.709808">
+
+    <!-- Open Graph (Facebook, Instagram, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Punto Chino">
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:url" content="https://puntochino.com/">
+    <meta property="og:title" content="Punto Chino | Repuestos de Autos Chinos en Ecuador">
+    <meta property="og:description"
+        content="Repuestos originales y alternativos para autos chinos: Chery, Great Wall, JAC, Changan, Dongfeng, Jetour y más. Sucursales en Manta y Portoviejo, con envíos a todo Ecuador.">
+    <meta property="og:image" content="https://puntochino.com/assets/images/banner-inicial.jpg">
+    <meta property="og:image:secure_url" content="https://puntochino.com/assets/images/banner-inicial.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="614">
+    <meta property="og:image:alt" content="Punto Chino — Autorepuestos Chinos en Ecuador">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Punto Chino | Repuestos de Autos Chinos en Ecuador">
+    <meta name="twitter:description"
+        content="Repuestos originales y alternativos para autos chinos en Manta y Portoviejo. Envíos a todo Ecuador. Cotiza por WhatsApp.">
+    <meta name="twitter:image" content="https://puntochino.com/assets/images/banner-inicial.jpg">
+    <meta name="twitter:image:alt" content="Punto Chino — Autorepuestos Chinos en Ecuador">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Leaflet — mapa libre (OpenStreetMap + CARTO), sin API key -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Aplica el tema guardado antes de pintar (evita parpadeo) -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('pc-theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <!-- ===================== Structured Data (Schema.org JSON-LD) ===================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://puntochino.com/#organization",
+          "name": "Punto Chino",
+          "alternateName": "Punto Chino Autorepuestos",
+          "url": "https://puntochino.com/",
+          "logo": "https://puntochino.com/assets/images/logo.png",
+          "image": "https://puntochino.com/assets/images/banner-inicial.jpg",
+          "description": "Especialistas en la venta de repuestos originales y alternativos para autos de origen chino en Ecuador.",
+          "email": "ventas@puntochino.com",
+          "telephone": "+593984911400",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Ecuador"
+          },
+          "sameAs": [
+            "https://www.facebook.com/autopartsmanabi/",
+            "https://www.instagram.com/puntochinoautorepuestos",
+            "https://www.tiktok.com/@puntochino.ec"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://puntochino.com/#website",
+          "url": "https://puntochino.com/",
+          "name": "Punto Chino",
+          "inLanguage": "es-EC",
+          "publisher": { "@id": "https://puntochino.com/#organization" }
+        },
+        {
+          "@type": "AutoPartsStore",
+          "@id": "https://puntochino.com/#manta",
+          "name": "Punto Chino Autorepuestos — Manta",
+          "parentOrganization": { "@id": "https://puntochino.com/#organization" },
+          "url": "https://puntochino.com/",
+          "image": "https://puntochino.com/assets/images/manta-1.jpg",
+          "priceRange": "$$",
+          "currenciesAccepted": "USD",
+          "paymentAccepted": "Efectivo, Tarjeta de crédito, Tarjeta de débito, Transferencia bancaria, DataLink",
+          "telephone": "+593984911400",
+          "email": "ventas@puntochino.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. 4 de Noviembre y calle 299 (esquina), diagonal a hielo Polar",
+            "addressLocality": "Manta",
+            "addressRegion": "Manabí",
+            "addressCountry": "EC"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -0.9624580525911236,
+            "longitude": -80.70980779118017
+          },
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=-0.9624580525911236,-80.70980779118017",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "08:00",
+              "closes": "15:00"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/autopartsmanabi/",
+            "https://www.instagram.com/puntochinoautorepuestos",
+            "https://www.tiktok.com/@puntochino.ec"
+          ]
+        },
+        {
+          "@type": "AutoPartsStore",
+          "@id": "https://puntochino.com/#portoviejo",
+          "name": "Punto Chino Autorepuestos — Portoviejo",
+          "parentOrganization": { "@id": "https://puntochino.com/#organization" },
+          "url": "https://puntochino.com/",
+          "image": "https://puntochino.com/assets/images/portoviejo-1.jpg",
+          "priceRange": "$$",
+          "currenciesAccepted": "USD",
+          "paymentAccepted": "Efectivo, Tarjeta de crédito, Tarjeta de débito, Transferencia bancaria, DataLink",
+          "telephone": "+593963862306",
+          "email": "ventas@puntochino.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. 15 de Abril, diagonal al CNE (frente al cuerpo de bomberos)",
+            "addressLocality": "Portoviejo",
+            "addressRegion": "Manabí",
+            "addressCountry": "EC"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -1.0635925940835218,
+            "longitude": -80.45699369349812
+          },
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=-1.0635925940835218,-80.45699369349812",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "08:00",
+              "closes": "15:00"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/autopartsmanabi/",
+            "https://www.instagram.com/puntochinoautorepuestos",
+            "https://www.tiktok.com/@puntochino.ec"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://puntochino.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cómo puedo saber si tienen el repuesto que necesito? ¿Puedo enviar una foto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Puedes contactarnos enviándonos la marca, modelo y año del vehículo, junto con el nombre o fotografía del repuesto. Nuestro equipo te ayudará a identificar la pieza adecuada."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Realizan ventas al por mayor y al por menor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Atendemos tanto a clientes particulares como a talleres, almacenes y distribuidores, con opciones de compra al por mayor y al por menor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Tienen los mejores precios?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Nos caracterizamos por ofrecer los mejores precios del mercado, tanto para compras al por mayor como al por menor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Puedo comprar repuestos si estoy fuera de la ciudad? ¿En cuánto tiempo llegaría?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "¡Por supuesto! Puedes realizar tu pedido de manera remota y coordinamos el envío hasta tu ciudad de manera inmediata. ¡Llega en un plazo máximo de 2 días!"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Por qué comprar con ustedes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Somos una empresa pionera y especializada en repuestos para vehículos chinos, con experiencia, variedad de productos, asesoría especializada, los mejores precios del mercado y cobertura a nivel nacional."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo puedo realizar un pedido?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Contáctanos por nuestros canales de atención, indícanos el repuesto que necesitas y te ayudaremos con la disponibilidad, precio y envío."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Dónde están ubicados?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Puedes encontrarnos en nuestras sucursales de Manta y Portoviejo. Visítanos en nuestros horarios de atención o contáctanos para recibir indicaciones y coordinar tu compra."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuáles son las formas de pago?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Para tu comodidad, contamos con diferentes opciones de pago: efectivo, tarjetas de crédito y débito (Diners, Visa, Mastercard), transferencias bancarias y DataLink."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -28,10 +283,11 @@
                 <div class="header-contact">
                     <a href="mailto:ventas@puntochino.com"><i class="fa-regular fa-envelope"></i>
                         ventas@puntochino.com</a>
-                    <a href="tel:+593999999999"><i class="fa-solid fa-phone"></i> +593 99 999 9999</a>
+                    <a href="tel:+593984911400"><i class="fa-solid fa-phone"></i> 098 491 1400</a>
+                    <a href="tel:+593963862306"><i class="fa-solid fa-phone"></i> 096 386 2306</a>
                 </div>
                 <div class="header-cta">
-                    <a href="https://wa.me/593999999999" ?text=Hola,%20quisiera%20más%20información" target="_blank"
+                    <a href="https://wa.me/593984911400?text=Hola,%20quisiera%20más%20información" target="_blank"
                         class="btn-whatsapp-small">
                         <i class="fa-brands fa-whatsapp"></i> Cotiza en WhatsApp
                     </a>
@@ -41,22 +297,30 @@
         <nav class="navbar">
             <div class="container navbar-content">
                 <a href="#hero" class="logo">
-                    <img src="./assets/images/LogotipoPuntoChino.png" alt="Punto Chino Logo">
+                    <img class="logo-dark" src="./assets/images/logo-letras-blancas.png"
+                        alt="Punto Chino Autorepuestos">
+                    <img class="logo-light" src="./assets/images/logo-grande-sinfondo.png" alt="Punto Chino Autorepuestos">
                 </a>
 
                 <div class="nav-links">
                     <a href="#hero">Inicio</a>
                     <a href="#features">Nosotros</a>
                     <a href="#brands">Marcas</a>
-                    <a href="#catalog">Catálogo</a>
+                    <a href="#faq">FAQ</a>
                     <a href="#locations">Sucursales</a>
                     <a href="#contact">Contacto</a>
                 </div>
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" type="button"
+                        aria-label="Cambiar entre tema claro y oscuro">
+                        <i class="fa-solid fa-sun"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -66,10 +330,13 @@
         <section id="hero" class="hero">
             <div class="hero-overlay"></div>
             <div class="container hero-content animate-on-scroll">
-                <h1 class="hero-title">
-                    Punto Chino
-                    <span class="text-secondary">los mejores repuestos</span>
-                </h1>
+                <div class="hero-eyebrow"><span class="status-dot"></span>Autorepuestos · Manta · Portoviejo · Ecuador</div>
+                <img class="hero-logo logo-dark" src="assets/images/logo-letras-blancas.png"
+                    alt="Punto Chino Autorepuestos">
+                <img class="hero-logo logo-light" src="assets/images/logo-grande-sinfondo.png"
+                    alt="Punto Chino Autorepuestos — los mejores repuestos">
+                <h1 class="hero-title" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;">
+                    Punto Chino los mejores repuestos</h1>
                 <p class="hero-subtitle">
                     Venta de repuestos originales y alternativos para todas las marcas
                     chinas con los mejores precios y disponibilidad inmediata del mercado.
@@ -85,27 +352,6 @@
                 </div>
             </div>
 
-            <!-- Stats Boxes floating at bottom -->
-            <div class="container hero-stats-wrapper">
-                <div class="hero-stats animate-on-scroll">
-                    <div class="stat-box">
-                        <h3 class="text-secondary">10K+</h3>
-                        <p>Clientes</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3 class="text-secondary">4</h3>
-                        <p>Talleres</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3 class="text-secondary">15+</h3>
-                        <p>Años de Exp.</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3 class="text-secondary">50K+</h3>
-                        <p>Repuestos</p>
-                    </div>
-                </div>
-            </div>
 
             <a href="#features" class="scroll-icon animate-bounce">
                 <i class="fa-solid fa-computer-mouse"></i>
@@ -122,7 +368,7 @@
                         <span class="text-primary">Automotrices Chinos</span>
                     </h2>
                     <p class="section-description">
-                        En Punto Chino nos enorgullece ser especialistas en repuestos automotrices de origen asiático.
+                        En Punto Chino nos enorgullece ser especialistas en repuestos automotrices de origen chino.
                         Nuestro compromiso es brindarte la mejor calidad, asesoría experta y los precios más
                         competitivos del mercado ecuatoriano. Trabajamos directamente con los fabricantes para asegurar
                         la autenticidad de cada pieza.
@@ -149,7 +395,7 @@
                         <div class="feature-icon"><i class="fa-solid fa-truck-fast text-primary"></i></div>
                         <div class="feature-text">
                             <h4>Rapidez</h4>
-                            <p>Despachos inmediatos en Quito y envíos a todo el país.</p>
+                            <p>Despachos inmediatos en Manta, Portoviejo y envíos a todo el país.</p>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -170,13 +416,57 @@
             </div>
         </section>
 
+        <!-- Mission & Vision Section -->
+        <section id="mission" class="section-padding background-light">
+            <div class="container text-center mb-50">
+                <div class="section-badge">NUESTRO PROPÓSITO</div>
+                <h2 class="section-title">Misión y <span class="text-primary">Visión</span></h2>
+                <p class="section-description mx-auto" style="max-width: 600px;">
+                    Lo que nos mueve y hacia dónde vamos como tu aliado en repuestos para vehículos chinos.
+                </p>
+            </div>
+
+            <div class="container mission-grid animate-on-scroll">
+                <div class="mission-visual">
+                    <img src="./assets/images/mascota-puntochino.jpg" alt="Mascota Punto Chino Autorepuestos">
+                </div>
+                <div class="mission-cards">
+                    <div class="mv-card">
+                        <div class="mv-head">
+                            <div class="feature-icon"><i class="fa-solid fa-bullseye text-primary"></i></div>
+                            <h3>Misión</h3>
+                        </div>
+                        <p>
+                            Somos una empresa pionera y especializada en la comercialización de autopartes y repuestos
+                            para vehículos chinos livianos y pesados. Nuestra misión es brindar a nuestros clientes
+                            soluciones confiables y oportunas, ofreciendo un amplio catálogo de productos de calidad,
+                            los mejores precios del mercado y asesoría especializada, con atención personalizada y
+                            envíos a todo el Ecuador, contribuyendo a mantener sus vehículos siempre en movimiento.
+                        </p>
+                    </div>
+                    <div class="mv-card">
+                        <div class="mv-head">
+                            <div class="feature-icon"><i class="fa-solid fa-eye text-primary"></i></div>
+                            <h3>Visión</h3>
+                        </div>
+                        <p>
+                            Satisfacer las necesidades de todos nuestros clientes que confían en nosotros,
+                            consolidándonos como su principal aliado en repuestos y autopartes para vehículos chinos.
+                            Buscamos mantener y fortalecer nuestro liderazgo en el mercado, ofreciendo cada vez más
+                            variedad, calidad y los mejores precios del mercado acompañados de un servicio
+                            especializado, con una cobertura que llegue a todos los rincones del Ecuador.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Brands Section -->
         <section id="brands" class="section-padding bg-dark text-center">
             <div class="container animate-on-scroll">
                 <div class="section-badge badge-light">NUESTRA ESPECIALIDAD</div>
                 <h2 class="section-title">
-                    <span class="text-light">Repuestos para </span>
-                    <span class="text-secondary">Todas las Marcas</span>
+                    Repuestos para <span class="text-secondary">Todas las Marcas</span>
                 </h2>
                 <p class="section-description mx-auto" style="max-width: 600px; color: #aaaaaa;">
                     Contamos con el catálogo más completo de autopartes para vehículos de origen chino en el país.
@@ -185,66 +475,26 @@
                 <div class="brands-carousel">
                     <!-- Carousel Track -->
                     <div class="carousel-track">
-                        <!-- We use text/icons if logos aren't available, but we'll setup the layout for images -->
-                        <div class="brand-card">
-                            <h4>CHERY</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>JAC</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>GEELY</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>HAVAL</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>GREAT WALL</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>DFSK</h4>
-                        </div>
+                        <div class="brand-card"><img src="assets/images/brands/jetour.png" alt="Jetour" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/chery.png" alt="Chery" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/greatwall.png" alt="Great Wall (GWM)" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/changan.png" alt="Changan" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/jac.png" alt="JAC" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/dongfeng.png" alt="Dongfeng" loading="lazy"></div>
                         <!-- Duplicate for infinite scroll -->
-                        <div class="brand-card">
-                            <h4>CHERY</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>JAC</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>GEELY</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>HAVAL</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>GREAT WALL</h4>
-                        </div>
-                        <div class="brand-card">
-                            <h4>DFSK</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="brands-stats">
-                    <div class="b-stat">
-                        <h3 class="text-secondary hide-text-shadow">12+</h3>
-                        <p class="text-light">Marcas</p>
-                    </div>
-                    <div class="b-stat">
-                        <h3 class="text-secondary hide-text-shadow">100+</h3>
-                        <p class="text-light">Modelos</p>
-                    </div>
-                    <div class="b-stat">
-                        <h3 class="text-secondary hide-text-shadow">10,000+</h3>
-                        <p class="text-light">Ventas</p>
+                        <div class="brand-card"><img src="assets/images/brands/jetour.png" alt="Jetour" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/chery.png" alt="Chery" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/greatwall.png" alt="Great Wall (GWM)" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/changan.png" alt="Changan" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/jac.png" alt="JAC" loading="lazy"></div>
+                        <div class="brand-card"><img src="assets/images/brands/dongfeng.png" alt="Dongfeng" loading="lazy"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Catalog Section -->
-        <section id="catalog" class="section-padding background-white text-center">
+        <!-- Catalog Section (oculto temporalmente — quitar el style para reactivar) -->
+        <section id="catalog" class="section-padding background-white text-center" style="display: none;">
             <div class="container animate-on-scroll">
                 <div class="section-badge">ENCUENTRA LO QUE BUSCAS</div>
                 <h2 class="section-title">
@@ -288,7 +538,7 @@
                             </div>
                             <h4 class="product-title">Pastillas de Freno</h4>
                             <p class="product-fit">Aplica: Tiggo 2, Tiggo 3, Arrizo 5</p>
-                            <a href="https://wa.me/593999999999?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Pastillas%20de%20Freno"
+                            <a href="https://wa.me/593984911400?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Pastillas%20de%20Freno"
                                 class="btn-whatsapp-full" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i> Consultar Precio
                             </a>
@@ -306,7 +556,7 @@
                             </div>
                             <h4 class="product-title">Bomba de Agua</h4>
                             <p class="product-fit">Aplica: S2, S3, T8</p>
-                            <a href="https://wa.me/593999999999?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Bomba%20de%20Agua"
+                            <a href="https://wa.me/593984911400?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Bomba%20de%20Agua"
                                 class="btn-whatsapp-full" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i> Consultar Precio
                             </a>
@@ -324,7 +574,7 @@
                             </div>
                             <h4 class="product-title">Kit de Distribución</h4>
                             <p class="product-fit">Aplica: Wingle 5, Wingle 7, Haval</p>
-                            <a href="https://wa.me/593999999999?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Kit%20de%20Distribución"
+                            <a href="https://wa.me/593984911400?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Kit%20de%20Distribución"
                                 class="btn-whatsapp-full" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i> Consultar Precio
                             </a>
@@ -342,7 +592,7 @@
                             </div>
                             <h4 class="product-title">Faro Delantero</h4>
                             <p class="product-fit">Aplica: Emgrand 7, GX3</p>
-                            <a href="https://wa.me/593999999999?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Faro%20Delantero"
+                            <a href="https://wa.me/593984911400?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Faro%20Delantero"
                                 class="btn-whatsapp-full" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i> Consultar Precio
                             </a>
@@ -360,7 +610,7 @@
                             </div>
                             <h4 class="product-title">Filtro de Aceite</h4>
                             <p class="product-fit">Aplica: Múltiples modelos Chinos</p>
-                            <a href="https://wa.me/593999999999?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Filtro%20de%20Aceite"
+                            <a href="https://wa.me/593984911400?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Filtro%20de%20Aceite"
                                 class="btn-whatsapp-full" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i> Consultar Precio
                             </a>
@@ -378,7 +628,7 @@
                             </div>
                             <h4 class="product-title">Amortiguadores</h4>
                             <p class="product-fit">Aplica: Glory 580, Glory 560</p>
-                            <a href="https://wa.me/593999999999?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Amortiguadores"
+                            <a href="https://wa.me/593984911400?text=Hola,%20deseo%20consultar%20el%20precio%20de:%20Amortiguadores"
                                 class="btn-whatsapp-full" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i> Consultar Precio
                             </a>
@@ -391,8 +641,143 @@
                 </div>
             </div>
         </section>
+
+        <!-- Shipping & Payment Section -->
+        <section id="shipping" class="section-padding background-light text-center">
+            <div class="container mb-50">
+                <div class="section-badge">COMPRA CON CONFIANZA</div>
+                <h2 class="section-title">Envíos y <span class="text-primary">Formas de Pago</span></h2>
+                <p class="section-description mx-auto" style="max-width: 600px;">
+                    Recibe tus repuestos donde estés y paga como más te convenga.
+                </p>
+            </div>
+
+            <div class="container shipping-grid animate-on-scroll">
+                <div class="shipping-card">
+                    <div class="shipping-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Envíos a todo el Ecuador</h3>
+                    <p>Llegamos a todo el Ecuador con despachos diarios, de forma rápida y segura estés donde estés.</p>
+                    <div class="payment-methods">
+                        <span class="pay-chip"><i class="fa-solid fa-box"></i> Despachos diarios</span>
+                        <span class="pay-chip"><i class="fa-solid fa-location-dot"></i> Cobertura nacional</span>
+                    </div>
+                </div>
+                <div class="shipping-card">
+                    <div class="shipping-icon"><i class="fa-solid fa-credit-card"></i></div>
+                    <h3>Formas de Pago</h3>
+                    <p>Para tu comodidad, contamos con diferentes opciones de pago. Elige la que más te convenga.</p>
+                    <div class="payment-methods">
+                        <span class="pay-chip"><i class="fa-solid fa-money-bill-wave"></i> Efectivo</span>
+                        <span class="pay-chip"><i class="fa-solid fa-credit-card"></i> Diners, Visa, Mastercard</span>
+                        <span class="pay-chip"><i class="fa-solid fa-building-columns"></i> Transferencias</span>
+                        <span class="pay-chip"><i class="fa-solid fa-link"></i> DataLink</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 40px;">
+                <a href="https://wa.me/593984911400?text=Hola,%20quisiera%20más%20información%20sobre%20envíos%20y%20formas%20de%20pago"
+                    target="_blank" class="btn btn-primary" style="padding: 14px 30px; font-size: 1.05rem;">
+                    <i class="fa-brands fa-whatsapp"></i> Contáctanos
+                </a>
+            </div>
+        </section>
+
+        <!-- Mascot CTA Band -->
+        <section class="mascot-band section-padding">
+            <div class="container mascot-band-inner animate-on-scroll">
+                <div class="mascot-img-wrap">
+                    <img class="mascot-dark" src="./assets/images/mascota-puntochino.jpg"
+                        alt="Mascota Punto Chino Autorepuestos">
+                    <img class="mascot-light" src="./assets/images/mascota-puntochino.jpg"
+                        alt="Mascota Punto Chino Autorepuestos">
+                </div>
+                <div class="mascot-text">
+                    <h2>Tu vehículo necesita repuestos de <span>confianza</span></h2>
+                    <p>
+                        Somos expertos en repuestos para vehículos chinos livianos y pesados. Cuéntanos qué necesitas
+                        y te ayudamos a encontrar la pieza exacta, al mejor precio del mercado.
+                    </p>
+                    <a href="https://wa.me/593984911400?text=Hola,%20necesito%20ayuda%20para%20encontrar%20un%20repuesto"
+                        target="_blank" class="btn-whatsapp-lg">
+                        <i class="fa-brands fa-whatsapp"></i> Contáctanos hoy
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding background-white text-center">
+            <div class="container mb-50">
+                <div class="section-badge">RESOLVEMOS TUS DUDAS</div>
+                <h2 class="section-title">Preguntas <span class="text-primary">Frecuentes</span></h2>
+                <p class="section-description mx-auto" style="max-width: 600px;">
+                    Todo lo que necesitas saber antes de comprar tus repuestos con nosotros.
+                </p>
+            </div>
+
+            <div class="container faq-wrapper animate-on-scroll">
+                <details class="faq-item" open>
+                    <summary>¿Cómo puedo saber si tienen el repuesto que necesito? ¿Puedo enviar una foto?</summary>
+                    <div class="faq-answer">
+                        Puedes contactarnos enviándonos la marca, modelo y año del vehículo, junto con el nombre o
+                        fotografía del repuesto. Nuestro equipo te ayudará a identificar la pieza adecuada.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Realizan ventas al por mayor y al por menor?</summary>
+                    <div class="faq-answer">
+                        Sí. Atendemos tanto a clientes particulares como a talleres, almacenes y distribuidores, con
+                        opciones de compra al por mayor y al por menor.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Tienen los mejores precios?</summary>
+                    <div class="faq-answer">
+                        Sí. Nos caracterizamos por ofrecer los mejores precios del mercado, tanto para compras al por
+                        mayor como al por menor.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Puedo comprar repuestos si estoy fuera de la ciudad? ¿En cuánto tiempo llegaría?</summary>
+                    <div class="faq-answer">
+                        ¡Por supuesto! Puedes realizar tu pedido de manera remota y coordinamos el envío hasta tu
+                        ciudad de manera inmediata. ¡Llega en un plazo máximo de 2 días!
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Por qué comprar con ustedes?</summary>
+                    <div class="faq-answer">
+                        Somos una empresa pionera y especializada en repuestos para vehículos chinos, con experiencia,
+                        variedad de productos, asesoría especializada, los mejores precios del mercado y cobertura a
+                        nivel nacional.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cómo puedo realizar un pedido?</summary>
+                    <div class="faq-answer">
+                        Contáctanos por nuestros canales de atención, indícanos el repuesto que necesitas y te
+                        ayudaremos con la disponibilidad, precio y envío.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Dónde están ubicados?</summary>
+                    <div class="faq-answer">
+                        Puedes encontrarnos en nuestras sucursales de Manta y Portoviejo. Visítanos en nuestros
+                        horarios de atención o contáctanos para recibir indicaciones y coordinar tu compra.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cuáles son las formas de pago?</summary>
+                    <div class="faq-answer">
+                        Para tu comodidad, contamos con diferentes opciones de pago: efectivo, tarjetas de crédito y
+                        débito (Diners, Visa, Mastercard), transferencias bancarias y DataLink.
+                    </div>
+                </details>
+            </div>
+        </section>
         <!-- Contact Section -->
-        <section id="contact" class="section-padding" style="background-color: #f0f2f5;">
+        <section id="contact" class="section-padding">
             <div class="container text-center" style="margin-bottom: 50px;">
                 <h2 class="section-title">Contáctanos</h2>
                 <p class="section-description mx-auto" style="max-width: 600px;">
@@ -412,21 +797,27 @@
                                 <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
                                 <div class="c-text">
                                     <strong>Ventas y Asesoría</strong>
-                                    <span>+593 99 999 9999</span>
+                                    <span>
+                                        <a href="tel:+593984911400">098 491 1400</a> · Manta<br>
+                                        <a href="tel:+593963862306">096 386 2306</a> · Portoviejo
+                                    </span>
                                 </div>
                             </li>
                             <li>
                                 <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
                                 <div class="c-text">
                                     <strong>Email</strong>
-                                    <span>ventas@puntochino.com</span>
+                                    <span>
+                                        <a href="mailto:ventas@puntochino.com">ventas@puntochino.com</a><br>
+                                        <a href="mailto:atencionservicioalcliente@puntochino.com">atencionservicioalcliente@puntochino.com</a>
+                                    </span>
                                 </div>
                             </li>
                             <li>
                                 <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
                                 <div class="c-text">
-                                    <strong>Horario de Atención Central</strong>
-                                    <span>Lun a Vie: 08:30 - 18:00<br>Sábados: 08:30 - 13:00</span>
+                                    <strong>Horario de Atención</strong>
+                                    <span>Lun a Vie: 08:00 - 18:00<br>Sábados: 08:00 - 15:00</span>
                                 </div>
                             </li>
                         </ul>
@@ -436,7 +827,7 @@
                         <h4 style="font-size: 1.3rem; margin-bottom: 10px;">¿Preguntas Frecuentes?</h4>
                         <p style="margin-bottom: 20px; font-size: 0.95rem; opacity: 0.9;">Revisa nuestra sección de
                             preguntas para resolver rápidamente dudas sobre envíos y compras.</p>
-                        <a href="#" class="btn btn-dark">Ver Preguntas Frecuentes</a>
+                        <a href="#faq" class="btn btn-dark">Ver Preguntas Frecuentes</a>
                     </div>
                 </div>
 
@@ -470,6 +861,18 @@
                             <i class="fa-brands fa-whatsapp"></i> Cotizar en WhatsApp
                         </button>
                     </form>
+
+                    <div class="client-cta">
+                        <i class="fa-solid fa-gift client-cta-icon"></i>
+                        <div class="client-cta-body">
+                            <strong>¿Aún no eres cliente?</strong>
+                            <p>Regístrate y accede a beneficios exclusivos: precios especiales, atención prioritaria y ofertas antes que nadie.</p>
+                            <a href="https://wa.me/593984911400?text=Hola%20Punto%20Chino%2C%20quiero%20registrarme%20como%20cliente%20y%20conocer%20los%20beneficios%20exclusivos."
+                                target="_blank" rel="noopener" class="btn btn-whatsapp-small client-cta-btn">
+                                <i class="fa-brands fa-whatsapp"></i> Regístrate como cliente
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -478,7 +881,7 @@
         <section id="locations" class="section-padding background-white">
             <div class="container text-center mb-50">
                 <div class="section-badge">VISÍTANOS</div>
-                <h2 class="section-title">Encuéntranos en <span class="text-primary">4 Ubicaciones</span></h2>
+                <h2 class="section-title">Encuéntranos en <span class="text-primary">2 Sucursales</span></h2>
                 <p class="section-description mx-auto" style="max-width: 600px;">
                     Visita cualquiera de nuestras sucursales y encuentra los repuestos que necesitas con la mejor
                     atención.
@@ -487,70 +890,133 @@
 
             <div class="container locations-grid animate-on-scroll">
                 <div class="location-card">
-                    <div class="loc-header bg-dark text-light">
+                    <button class="loc-photo" type="button"
+                        data-images="assets/images/manta-1.jpg|assets/images/manta-2.jpg"
+                        aria-label="Ver fotos del local de Manta">
+                        <img src="assets/images/manta-1.jpg" alt="Local Punto Chino — Manta" loading="lazy">
+                        <span class="loc-photo-badge"><i class="fa-solid fa-expand"></i> Ver fotos</span>
+                    </button>
+                    <div class="loc-header">
                         <h4>Manta</h4>
                         <span class="badge-primary">Matriz</span>
                     </div>
                     <div class="loc-body">
-                        <p><i class="fa-solid fa-location-dot text-primary c-icon-sm"></i> Av. 4 de noviembre y calle
-                            299 (ESQUINA) diagonal a hielo “Polar”</p>
-                        <p><i class="fa-solid fa-phone text-primary c-icon-sm"></i> 098 491 1400</p>
-                        <p><i class="fa-solid fa-clock text-primary c-icon-sm"></i> Lun-Vie: 8:30 a 18:00</p>
-                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline mt-15 w-100">Ver en
-                            Mapa</a>
+                        <p><i class="fa-solid fa-location-dot c-icon-sm"></i> Av. 4 de Noviembre y calle 299 (esquina),
+                            diagonal a hielo “Polar”</p>
+                        <p><i class="fa-solid fa-phone c-icon-sm"></i> 098 491 1400</p>
+                        <p><i class="fa-solid fa-clock c-icon-sm"></i> Lun–Vie: 8:00–18:00 · Sáb: 8:00–15:00</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=-0.9624580525911236,-80.70980779118017"
+                            target="_blank" rel="noopener" class="btn btn-outline mt-15 w-100">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Ver en Google Maps</a>
                     </div>
                 </div>
 
                 <div class="location-card">
-                    <div class="loc-header bg-dark text-light">
-                        <h4>Manta</h4>
-                        <span class="badge-primary">Norte</span>
-                    </div>
-                    <div class="loc-body">
-                        <p><i class="fa-solid fa-location-dot text-primary c-icon-sm"></i> Av. 4 de noviembre y calle
-                            299 (ESQUINA) diagonal a hielo “Polar”</p>
-                        <p><i class="fa-solid fa-phone text-primary c-icon-sm"></i> 02 234 5679</p>
-                        <p><i class="fa-solid fa-clock text-primary c-icon-sm"></i> Lun-Vie: 8:30 a 18:00</p>
-                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline mt-15 w-100">Ver en
-                            Mapa</a>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <div class="loc-header bg-dark text-light">
+                    <button class="loc-photo" type="button"
+                        data-images="assets/images/portoviejo-1.jpg|assets/images/portoviejo-2.jpg"
+                        aria-label="Ver fotos del local de Portoviejo">
+                        <img src="assets/images/portoviejo-1.jpg" alt="Local Punto Chino — Portoviejo" loading="lazy">
+                        <span class="loc-photo-badge"><i class="fa-solid fa-expand"></i> Ver fotos</span>
+                    </button>
+                    <div class="loc-header">
                         <h4>Portoviejo</h4>
                         <span class="badge-primary">Sur</span>
                     </div>
                     <div class="loc-body">
-                        <p><i class="fa-solid fa-location-dot text-primary c-icon-sm"></i>Frente al cuerpo de bomberos,
-                            15 de Abril, Portoviejo</p>
-                        <p><i class="fa-solid fa-phone text-primary c-icon-sm"></i>0963862306</p>
-                        <p><i class="fa-solid fa-clock text-primary c-icon-sm"></i> Lun-Vie: 8:30 a 18:00</p>
-                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline mt-15 w-100">Ver en
-                            Mapa</a>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <div class="loc-header bg-dark text-light">
-                        <h4>Norte</h4>
-                        <span class="badge-primary">Quito Norte</span>
-                    </div>
-                    <div class="loc-body">
-                        <p><i class="fa-solid fa-location-dot text-primary c-icon-sm"></i> Av. 10 de Agosto</p>
-                        <p><i class="fa-solid fa-phone text-primary c-icon-sm"></i> 02 234 5681</p>
-                        <p><i class="fa-solid fa-clock text-primary c-icon-sm"></i> Lun-Vie: 8:30 a 18:00</p>
-                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline mt-15 w-100">Ver en
-                            Mapa</a>
+                        <p><i class="fa-solid fa-location-dot c-icon-sm"></i> Frente al cuerpo de bomberos, Av. 15 de
+                            Abril, Portoviejo</p>
+                        <p><i class="fa-solid fa-phone c-icon-sm"></i> 096 386 2306</p>
+                        <p><i class="fa-solid fa-clock c-icon-sm"></i> Lun–Vie: 8:00–18:00 · Sáb: 8:00–15:00</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=-1.0635925940835218,-80.45699369349812"
+                            target="_blank" rel="noopener" class="btn btn-outline mt-15 w-100">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Ver en Google Maps</a>
                     </div>
                 </div>
             </div>
 
             <div class="container animate-on-scroll d-delay-1" style="margin-top: 40px;">
-                <div class="map-placeholder border-radius-md">
-                    <i class="fa-solid fa-map-location-dot map-icon text-primary"></i>
-                    <h4>Mapa Interactivo</h4>
-                    <p>Integración de Google Maps (Iframe)</p>
+                <div id="map" role="region" aria-label="Mapa de sucursales Punto Chino"></div>
+                <p class="map-note">Mapa por OpenStreetMap &amp; CARTO — libre y sin API key.</p>
+            </div>
+        </section>
+
+        <!-- Returns & Exchanges Section -->
+        <section id="returns" class="section-padding background-light">
+            <div class="container text-center mb-50">
+                <div class="section-badge">POLÍTICAS CLARAS</div>
+                <h2 class="section-title">Cambios y <span class="text-primary">Devoluciones</span></h2>
+                <p class="section-description mx-auto" style="max-width: 640px;">
+                    Queremos que compres con total tranquilidad. Estas son nuestras condiciones para cambios y
+                    devoluciones.
+                </p>
+            </div>
+
+            <div class="container returns-wrapper animate-on-scroll">
+                <div class="return-block">
+                    <h3><span class="num">1</span> Condiciones para solicitar un cambio o devolución</h3>
+                    <p>El cliente podrá solicitar un cambio o devolución cuando:</p>
+                    <ul class="return-list">
+                        <li><i class="fa-solid fa-circle"></i> El producto recibido presente defectos de fabricación.</li>
+                        <li><i class="fa-solid fa-circle"></i> El producto enviado no corresponda al solicitado, siempre
+                            que el error sea atribuible a nuestra empresa.</li>
+                    </ul>
+                    <p class="return-highlight">
+                        Deberá transcurrir un período adicional de 48 horas laborables para verificar la incidencia
+                        antes de procesar una eventual devolución.
+                    </p>
+                </div>
+
+                <div class="return-block">
+                    <h3><span class="num">2</span> Estado del producto</h3>
+                    <p>Para que un cambio o devolución sea considerado, el repuesto deberá encontrarse:</p>
+                    <ul class="return-list">
+                        <li><i class="fa-solid fa-circle"></i> Sin señales de instalación o uso.</li>
+                        <li><i class="fa-solid fa-circle"></i> En las mismas condiciones en las que fue entregado.</li>
+                        <li><i class="fa-solid fa-circle"></i> Con su empaque, etiquetas y accesorios originales, cuando
+                            corresponda.</li>
+                        <li><i class="fa-solid fa-circle"></i> Sin modificaciones, daños o alteraciones ocasionadas por
+                            el cliente.</li>
+                    </ul>
+                </div>
+
+                <div class="return-block">
+                    <h3><span class="num">3</span> Compatibilidad del repuesto</h3>
+                    <p>Antes de realizar la compra, recomendamos confirmar correctamente la marca, modelo, año y
+                        características del vehículo, así como la referencia del repuesto.</p>
+                    <p>En caso de dudas, nuestro equipo está disponible para brindar asesoría especializada y ayudar a
+                        identificar el producto adecuado.</p>
+                    <p>Los cambios por incompatibilidad ocasionada por información incorrecta proporcionada por el
+                        cliente estarán sujetos a revisión y a las condiciones del producto.</p>
+                </div>
+
+                <div class="return-block">
+                    <h3><span class="num">4</span> Plazo para solicitar un cambio o devolución</h3>
+                    <p>Las solicitudes deberán realizarse dentro de los 2 días posteriores a la recepción del producto;
+                        aplican restricciones de acuerdo a cada caso.</p>
+                    <p>Para iniciar el proceso, el cliente deberá comunicarse con nuestro equipo y proporcionar la
+                        información necesaria para verificar el caso.</p>
+                </div>
+
+                <div class="return-block">
+                    <h3><span class="num">5</span> Gastos de envío</h3>
+                    <p>Cuando el cambio o devolución sea consecuencia de un error de nuestra empresa o un defecto
+                        atribuible al producto, se coordinará la cobertura de los costos de envío correspondientes.</p>
+                    <p>Cuando el cambio sea solicitado por una razón ajena a nuestra empresa, los costos de envío podrán
+                        ser asumidos por el cliente, previa coordinación.</p>
+                </div>
+
+                <div class="return-block">
+                    <h3><span class="num">6</span> Productos que no aplican para devolución</h3>
+                    <p>No se aceptarán cambios o devoluciones de productos que:</p>
+                    <ul class="return-list">
+                        <li><i class="fa-solid fa-circle"></i> Hayan sido instalados o utilizados.</li>
+                        <li><i class="fa-solid fa-circle"></i> Presenten daños ocasionados por una instalación
+                            incorrecta.</li>
+                        <li><i class="fa-solid fa-circle"></i> Hayan sido modificados, manipulados o alterados.</li>
+                        <li><i class="fa-solid fa-circle"></i> Presenten desgaste derivado del uso.</li>
+                        <li><i class="fa-solid fa-circle"></i> No cumplan con las condiciones de devolución indicadas
+                            anteriormente.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -560,27 +1026,22 @@
     <footer class="footer bg-dark text-light">
         <div class="container footer-content animate-on-scroll">
             <div class="footer-col">
-                <img src="assets/images/LogotipoPuntoChino.png" alt="Punto Chino" class="footer-logo mb-15">
+                <img class="footer-logo logo-dark mb-15" src="assets/images/logo-letras-blancas.png"
+                    alt="Punto Chino Autorepuestos">
+                <img class="footer-logo logo-light mb-15" src="assets/images/logo-grande-sinfondo.png"
+                    alt="Punto Chino Autorepuestos">
                 <p class="text-gray" style="font-size: 0.9rem;">
                     Especialistas en la venta de repuestos originales y alternativos para todas las marcas de vehículos
                     chinos en Ecuador.
                 </p>
                 <div class="social-links mt-15">
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/autopartsmanabi/" target="_blank" rel="noopener"
+                        aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/puntochinoautorepuestos" target="_blank" rel="noopener"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@puntochino.ec" target="_blank" rel="noopener"
+                        aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
-            </div>
-
-            <div class="footer-col">
-                <h4>Categorías</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Filtros</a></li>
-                    <li><a href="#">Frenos</a></li>
-                    <li><a href="#">Motor</a></li>
-                    <li><a href="#">Suspensión</a></li>
-                    <li><a href="#">Carrocería</a></li>
-                </ul>
             </div>
 
             <div class="footer-col">
@@ -588,8 +1049,9 @@
                 <ul class="footer-links">
                     <li><a href="#hero">Inicio</a></li>
                     <li><a href="#features">Nosotros</a></li>
-                    <li><a href="#brands">Marcas</a></li>
-                    <li><a href="#catalog">Catálogo</a></li>
+                    <li><a href="#shipping">Envíos y Pagos</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#returns">Cambios y Devoluciones</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </div>
@@ -597,10 +1059,13 @@
             <div class="footer-col">
                 <h4>Contáctanos</h4>
                 <ul class="footer-contact">
-                    <li><i class="fa-solid fa-location-dot"></i> Av. 4 de noviembre y calle 299 (ESQUINA) diagonal a
-                        hielo “Polar”</li>
-                    <li><i class="fa-solid fa-phone"></i> +593 99 999 9999</li>
-                    <li><i class="fa-solid fa-envelope"></i> ventas@puntochino.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> <strong>Manta:</strong> Av. 4 de noviembre y calle 299
+                        (ESQUINA) diagonal a hielo “Polar”</li>
+                    <li><i class="fa-solid fa-location-dot"></i> <strong>Portoviejo:</strong> Av. 15 de abril, diagonal
+                        al CNE</li>
+                    <li><i class="fa-solid fa-phone"></i> <a href="tel:+593984911400">098 491 1400</a> · <a href="tel:+593963862306">096 386 2306</a></li>
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:ventas@puntochino.com">ventas@puntochino.com</a></li>
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:atencionservicioalcliente@puntochino.com">atencionservicioalcliente@puntochino.com</a></li>
                 </ul>
             </div>
         </div>
@@ -608,16 +1073,26 @@
         <div class="footer-bottom text-center">
             <div class="container">
                 <p class="text-gray m-0">&copy; 2026 Punto Chino. Todos los derechos reservados. | Diseñado por
-                    KristiancDev</p>
+                    <a href="https://dtiware.com" target="_blank" rel="noopener">Dtiware</a></p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/593999999999?text=Hola,%20quisiera%20más%20información" target="_blank" class="floating-wa">
+    <a href="https://wa.me/593984911400?text=Hola,%20quisiera%20más%20información" target="_blank" class="floating-wa">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Lightbox / visor de fotos -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lb-close" id="lbClose" type="button" aria-label="Cerrar">&times;</button>
+        <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Anterior">&#8249;</button>
+        <img class="lb-img" id="lbImg" src="" alt="Foto del local Punto Chino">
+        <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Siguiente">&#8250;</button>
+        <div class="lb-count" id="lbCount"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="script.js"></script>
 </body>
 

@@ -1,0 +1,15 @@
+# Local Netlify folder
+.netlify
+
+# Backup de assets no usados (mover aquí antes de borrar definitivamente)
+_backup/
+
+# Bundle de publicación (se genera localmente, no se versiona)
+deploy/
+
+# Carpetas de herramientas y editor
+.atl/
+.claude/
+
+# Documentación interna (no se versiona)
+SEO-CHECKLIST.md
